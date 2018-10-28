@@ -16,6 +16,9 @@ export class ProfileComponent implements OnInit {
     }
     this.http.get<ApiResponse>('https://api.github.com/users/' + this.user.username + '?access_token=' + this.user.token ).subscribe(data=>{
       this.user = new User (data.username, data.token) ;
+    }, err => {
+        this.user = new User ('https://api.github.com/users/daneden?access_token=1e09e1baa573d7f49014ffe3db068ea7ce8475cd');
+        console.log('Error occured');
   });
  }
  }
