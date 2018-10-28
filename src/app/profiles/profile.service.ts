@@ -7,6 +7,7 @@ import {environment} from '../../environments/environment';
 })
 export class ProfileService {
     user: User;
+    // private username = 'sir-meee';
   constructor(private http: HttpClient) {
     this.user = new User (' ', ' ', ' ');
   }
@@ -24,10 +25,10 @@ export class ProfileService {
         console.log(profile);
          resolve();
     },
-    error => {
-        this.user.name = 'daneden';
-            reject(error);
-        }
+    // error => {
+    //     username = 'daneden';
+    //         reject(error);
+    //     }
     );
 });
 return promise;
