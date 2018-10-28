@@ -10,9 +10,9 @@ import {ProfileService} from '../profiles/profile.service';
 export class ProfileFormComponent implements OnInit {
 user:User;
   constructor(private profileService: ProfileService) { }
-findProfile(){
-  this.profileService.updateProfile(this.user.username);
-}
+// findProfile(){
+//   this.profileService.updateProfile(this.user.username);
+// }
   ngOnInit() {
   }
  }

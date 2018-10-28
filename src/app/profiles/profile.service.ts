@@ -8,22 +8,24 @@ import {environment} from '../../environments/environment';
 export class ProfileService {
     user: User;
   constructor(private http: HttpClient) {
-    this.user = new User (' ', '1e09e1baa573d7f49014ffe3db068ea7ce8475cd'  );
+    this.user = new User (' ', ' ', ' ');
   }
-   getProfileInfo() {
+   getProfileInfo(username) {
     interface ApiResponse {
-      username: string;
-      token;
+        name: string;
+        login: string;
+        avatar_url: string;
   }
-  let promise =new Promise((resolve, reject) => {
-    this.http.get<ApiResponse>(environment.apiUrl).toPromise().then(response => {
-         this.user.username = response.username;
-        this.user.token = response.token;
+  const promise = new Promise((resolve, reject) => {
+    this.http.get<ApiResponse>(environment.apiUrl + username + environment.apikey).toPromise().then(profile => {
+         this.user.name = profile.name;
+        this.user.login = profile.login;
+        this.user.avatar_url = profile.avatar_url;
+        console.log(profile);
          resolve();
     },
     error => {
-            this.user.username = 'daneden';
-            this.user.token = '1e09e1baa573d7f49014ffe3db068ea7ce8475cd';
+        this.user.name = 'daneden';
             reject(error);
         }
     );

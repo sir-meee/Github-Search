@@ -1,3 +1,12 @@
-<p>
-    profile works!
-  </p>
+  <div class="jumbotron">
+    <h1>Github Search</h1>
+  </div>
+  <form>
+    <div class="form-group">
+    <input type="text" class="form-control" placeholder="Enter Github username here" [(ngModel)]="this.username" name="this.username">
+    </div>
+    <button type="submit" class="btn btn-group"> Search</button>
+    </form>
+  <div class="profile">
+    <p> name is {{user.name}} and login is {{user.login}}</p>
+  </div>
