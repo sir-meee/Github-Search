@@ -1,0 +1,6 @@
+<form (ngSubmit)="submitSearch()" #searchForm="ngForm">
+    <div class="form-group">
+    <input type="text" class="form-control" placeholder="Enter Github username here" id="name" name="name" [(ngModel)]="newSearching.name" #name='ngModel'>
+    </div>
+    <button (click)='submitSearch(name)' type="submit" class="btn btn-group"> Search</button>
+    </form>
