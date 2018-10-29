@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {Searching} from '../searching';
 import { ProfileService } from '../profiles/profile.service';
 
