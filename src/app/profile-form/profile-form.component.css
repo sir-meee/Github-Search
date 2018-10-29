@@ -1,0 +1,14 @@
+form{
+    margin-left:800px;
+  }
+  .form-control{
+    width:300px;
+    margin: 10px;
+  }
+  button{
+    background-color: rgb(172, 212, 218);
+    margin-left:100px;
+   }
+  i{
+    width: 100px;;
+  }

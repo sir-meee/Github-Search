@@ -1,7 +1,42 @@
+<div class="container-fluid">
   <div class="jumbotron">
     <h1>Github Search</h1>
   </div>
   <app-profile-form></app-profile-form>
-  <div class="profile">
+  <!-- <div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Basic Information</h3>
+  </div>
     <p> name is {{user.name}} and login is {{user.login}}</p>
+  </div> -->
+  <div class="row">
+    <div class="col-md-4">
+        <a href="{{user.html_url}}" class="btn btn-success">View Profile</a>
+        <img src="{{user.avatar_url}}" height="400" class="img-circle">
+     </div>
+     <div class="col-md-6">
+    <table>
+    <tr>
+    <td >Name: </td>
+    <td class="label">{{user.name}}</td>
+    </tr>
+    <tr>
+    <td >Github username: </td>
+    <td class="label">{{user.login}}</td>
+    </tr>
+    <tr>
+    <td >Email Information: </td>
+        <td class="label">{{user.email}}</td>
+        </tr>
+    <tr>
+       <td >Location: </td>
+      <td class="label">{{user.location}}</td>
+      </tr>
+      <tr>
+       <td >Repositories: </td>
+        <td class="label">{{user.public_repos}}</td>
+         </tr>
+    </table>
+    </div>
+    </div>
   </div>
