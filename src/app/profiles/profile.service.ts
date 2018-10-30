@@ -2,18 +2,18 @@ import { Injectable } from '@angular/core';
 import {User} from '../user';
 import {HttpClient} from '@angular/common/http';
 import {environment} from '../../environments/environment';
-import {Repo}s from '../repos';
+import {Repo} from '../repo';
  @Injectable({
   providedIn: 'root'
 })
 export class ProfileService {
-    repos: Repos; 
+    repo: Repo; 
     user: User;
+    items = [];
     private username: string;
   constructor(private http: HttpClient) {
     this.user = new User (' ', ' ', ' ', ' ', ' ', 0, ' ');
-    this.repos= new Repos (' ', ' ', ' ', ' ', ' ');
-    this.username = 'sir-meee';
+    this.repo = new Repo (' ', ' ', ' ', ' ', ' ');
   }
    getProfileInfo(username) {
     interface ApiResponse {
@@ -51,22 +51,13 @@ getRepoInfo(username) {
     homepage: string;
     clone_url: string;
 }
-const promise = new Promise((resolve, reject) => {
-  this.http.get<ApiResponse>(environment.apiUrl + username + environment.apiRepokey).toPromise().then(response => {
-    this.repos.name = response.name;
-    this.repos.url = response.url;
-    this.repos.description = response.description;
-    this.repos.homepage = response.homepage;
-    this.repos.clone_url = response.clone_url;
-    console.log(response);
-         resolve();
-    },
-    resolve();
-  },
-   );
-
-});
-
-return promise;
-}
+this.http.get<ApiResponse>(environment.apiUrl + username + environment.apiRepokey).subscribe(response => {
+  for (let index = 0; index < response.length; index++) {
+    console.log(response[index]);
+    this.repo.name = response[index].name;
+    this.repo.url = response[index].url;
+    this.repo.description = response[index].description;
+    this.repo.homepage = response[index].homepage;
+    this.repo.clone_url = response[index].clone_url;
+  });
 }

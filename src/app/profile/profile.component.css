@@ -30,3 +30,11 @@
   a{
     float: right;
   }
+  #repos{
+    margin-top: 200px;
+   text-align: center
+ }
+ hr{
+   box-shadow: 0 0 10px 1px black;
+   margin-top: 50px;
+ }
