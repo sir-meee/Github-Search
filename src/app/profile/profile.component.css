@@ -5,6 +5,8 @@
   .img-circle{
     border-radius:600px;
     float: right;
+    margin-right: 20px;
+    margin-bottom: 20px;
   }
   #title{
     text-align: center
@@ -12,6 +14,8 @@
   table{
     border: 2px solid black;
     border-collapse: collapse;
+    border-style: outset;
+    border-width:5px;
     width:100%;
     height: 100%;
     text-align: center
@@ -30,11 +34,54 @@
   a{
     float: right;
   }
-  #repos{
-    margin-top: 200px;
-   text-align: center
- }
+  
  hr{
    box-shadow: 0 0 10px 1px black;
    margin-top: 50px;
  }
+ #view{
+  float: left;
+  margin-left: 183px;
+}
+ .line{
+   width: 20px;
+}
+.card-header{
+  text-align: center;
+margin-top: 20px;
+  font-size: 35px;
+  font-family: 'Chewy', cursive;
+ }
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+.card{
+  background-color: rgba(168, 206, 203, 0.5);
+}
+
+h1{
+  font-family: 'Baloo Bhai', cursive;
+}
+h2{
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+.card-title{
+  font-family: 'Boogaloo', cursive;
+}
+.posi{
+  margin-left: 10px;
+  margin-bottom: 100px;
+  float: left;
+  padding: 10px;
+}

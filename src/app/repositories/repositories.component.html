@@ -1,1 +1,7 @@
-{{repo.name}}
+<div>
+  <ul *ngFor='let repo of repoService.repos$ ; let i = index'>
+    <li>
+      {{repoService.repos$[i].name}}
+    </li>
+  </ul>
+</div>

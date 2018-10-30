@@ -10,12 +10,13 @@ import {Repo} from '../repo';
   providers: [ProfileService]
 })
 export class RepositoriesComponent implements OnInit {
-  public username = 'owenmur21';
   repo: Repo;
-  items = [];
-   constructor(private profileService: ProfileService, private repoService: ProfileService) { }
+   constructor(private profileService: ProfileService, public repoService: ProfileService) {
+    // console.log(this.repoService.getRepoInfo(this.username));
+
+   }
    ngOnInit() {
-    this.profileService.getProfileInfo(this.username);
+  
     
   }
  }

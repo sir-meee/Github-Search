@@ -9,8 +9,9 @@ import {Repo} from '../repo';
 export class ProfileService {
     repo: Repo; 
     user: User;
-    items = [];
+    
     private username: string;
+    items;
   constructor(private http: HttpClient) {
     this.user = new User (' ', ' ', ' ', ' ', ' ', 0, ' ');
     this.repo = new Repo (' ', ' ', ' ', ' ', ' ');
@@ -46,18 +47,14 @@ return promise;
 getRepoInfo(username) {
   interface ApiResponse {
     name: string;
-    url: string;
-    description: string;
     homepage: string;
+    description: string;
+    html_url: string;
     clone_url: string;
 }
 this.http.get<ApiResponse>(environment.apiUrl + username + environment.apiRepokey).subscribe(response => {
-  for (let index = 0; index < response.length; index++) {
-    console.log(response[index]);
-    this.repo.name = response[index].name;
-    this.repo.url = response[index].url;
-    this.repo.description = response[index].description;
-    this.repo.homepage = response[index].homepage;
-    this.repo.clone_url = response[index].clone_url;
+  
+    this.items = response;  
   });
+}
 }

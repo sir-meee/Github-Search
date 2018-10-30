@@ -9,14 +9,10 @@ import { ProfileService } from '../profiles/profile.service';
 
 })
 export class ProfileFormComponent implements OnInit {
-  newSearching = new Searching('');
-  // @Output() getName = new EventEmitter<Searching>();
+
    submitSearch(name) {
-      // this.getName.emit(this.newSearching);
-      // this.newSearching = new Searching('');
-      console.log(name.value);
-      this.profileService.getProfileInfo(name.value);
-      this.repoService.getRepoInfo(name.value);
+    this.profileService.getProfileInfo(name.target.value);
+    this.repoService.getRepoInfo(name.target.value);
   }
    constructor(private profileService: ProfileService, private repoService: ProfileService) { }
   ngOnInit() {
