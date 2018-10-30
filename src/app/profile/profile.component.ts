@@ -14,7 +14,9 @@ export class ProfileComponent implements OnInit {
     user: User;
     // repo: Repo;
     // repos: Repo[];
-   constructor(private profileService: ProfileService, public repoService: ProfileService) { }
+   constructor(private profileService: ProfileService, public repoService: ProfileService) { 
+   this.user = this.profileService.user;
+   }
    ngOnInit() {
     // this.profileService.getProfileInfo(this.username);
     this.user = this.profileService.user;

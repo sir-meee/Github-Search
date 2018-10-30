@@ -1,6 +1,7 @@
 .jumbotron{
     text-align: center;
-    background-color: rgb(96, 168, 170);
+    background-color: rgb(15, 15, 15);
+    color: aliceblue;
    }
   .img-circle{
     border-radius:600px;
@@ -18,7 +19,7 @@
     border-width:5px;
     width:100%;
     height: 100%;
-    text-align: center
+    text-align: center;
   }
   td{
     border: 1px solid #dddddd;
@@ -48,7 +49,7 @@
 }
 .card-header{
   text-align: center;
-margin-top: 20px;
+  margin-top: 20px;
   font-size: 35px;
   font-family: 'Chewy', cursive;
  }
@@ -66,9 +67,11 @@ margin-top: 20px;
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 .card{
-  background-color: rgba(168, 206, 203, 0.5);
+  background-color: rgba(252, 252, 252, 0.5);
 }
-
+.card-body{
+  text-align: center;
+}
 h1{
   font-family: 'Baloo Bhai', cursive;
 }
@@ -78,10 +81,15 @@ h2{
 }
 .card-title{
   font-family: 'Boogaloo', cursive;
+  color: blue;
+  font-family: sans-serif;
 }
 .posi{
-  margin-left: 10px;
-  margin-bottom: 100px;
-  float: left;
-  padding: 10px;
+  margin-right: 740px;
+}
+a{
+  text-align: center
+}
+.card-text{
+  color: gray
 }
