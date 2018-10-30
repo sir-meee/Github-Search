@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Repo} from '../repo';
+
 import {ProfileService} from '../profiles/profile.service';
  @Component({
   selector: 'app-repositories',
@@ -10,10 +10,10 @@ import {ProfileService} from '../profiles/profile.service';
 })
 export class RepositoriesComponent implements OnInit {
   public username = 'owenmur21';
-  repo: Repo;
-   constructor(private profileService: ProfileService) { }
+  repos: any;
+   constructor(private profileService: ProfileService, private repoService: ProfileService) { }
    ngOnInit() {
-    this.profileService.getRepoInfo(this.username);
-    this.repo = this.profileService.repo;
+    this.profileService.getProfileInfo(this.username);
+    this.repos = this.profileService.repos;
   }
  }
