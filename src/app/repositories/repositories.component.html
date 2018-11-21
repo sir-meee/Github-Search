@@ -1,5 +1,5 @@
 <div>
-  <ul *ngFor='let repo of repoService.repos$ ; let i = index'>
+  <ul *ngFor='let repo of repoService.repo ; let i = index'>
     <li>
       {{repoService.repos$[i].name}}
     </li>
