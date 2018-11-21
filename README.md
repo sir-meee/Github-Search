@@ -8,6 +8,7 @@ This is a website where you can search Github users, view their repositories and
 #### By **Sammy**
 
 ## Link to site
+ https://sir-meee.github.io/Github-Search/
 
 
 ## Setup/Installation Requirements
